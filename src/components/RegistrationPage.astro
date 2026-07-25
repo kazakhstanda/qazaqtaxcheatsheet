@@ -2,6 +2,7 @@
 import ContentPage from './ContentPage.astro';
 import ImagePreview from './ImagePreview.astro';
 import Callout from './Callout.astro';
+import { withBase } from '../utils/url';
 ---
 
 <ContentPage title="[Архив] Как зарегистрироваться на упрощенку в 2026 году">
@@ -24,7 +25,7 @@ import Callout from './Callout.astro';
           — заходите в Кабинет ИСНА своими ЭЦП ключами.
         </p>
         <ImagePreview
-          src="https://qazaqtaxcheatsheet.fyi/images/reg-step1-login.png"
+          src={withBase('/images/reg-step1-login.png')}
           alt="Страница авторизации knp.kgd.gov.kz"
           width={1126}
           height={556}
@@ -39,13 +40,13 @@ import Callout from './Callout.astro';
           После авторизации найдите кнопку «Подать документ» в личном кабинете.
         </p>
         <ImagePreview
-          src="https://qazaqtaxcheatsheet.fyi/images/reg-step2-submit.png"
+          src={withBase('/images/reg-step2-submit.png')}
           alt="Кнопка «Подать документ» в личном кабинете"
           width={1078}
           height={661}
         />
         <ImagePreview
-          src="https://qazaqtaxcheatsheet.fyi/images/reg-step2-list.png"
+          src={withBase('/images/reg-step2-list.png')}
           alt="Список документов для подачи"
           width={1429}
           height={358}
@@ -61,7 +62,7 @@ import Callout from './Callout.astro';
           Поиск по названию не работает. Заполняем и отправляем форму.
         </p>
         <ImagePreview
-          src="https://qazaqtaxcheatsheet.fyi/images/reg-step3-form4.png"
+          src={withBase('/images/reg-step3-form4.png')}
           alt="Страница выбора формы уведомления"
           width={1706}
           height={1690}
@@ -76,7 +77,7 @@ import Callout from './Callout.astro';
           Заполните все обязательные поля формы. Укажите режим — «Упрощенная декларация».
         </p>
         <ImagePreview
-          src="https://qazaqtaxcheatsheet.fyi/images/reg-step4-fill.png"
+          src={withBase('/images/reg-step4-fill.png')}
           alt="Заполнение формы уведомления"
           width={2048}
           height={1195}
@@ -91,7 +92,7 @@ import Callout from './Callout.astro';
           Выбираем свое УГД. У автора документации это УГД по алмалинскому району Алматы.
         </p>
         <ImagePreview
-          src="https://qazaqtaxcheatsheet.fyi/images/reg-step5-ugd.png"
+          src={withBase('/images/reg-step5-ugd.png')}
           alt="Выбор УГД (управление государственных доходов)"
           width={2048}
           height={1150}
@@ -106,7 +107,7 @@ import Callout from './Callout.astro';
           Проверьте данные перед отправкой.
         </p>
         <ImagePreview
-          src="https://qazaqtaxcheatsheet.fyi/images/reg-step6-preview.png"
+          src={withBase('/images/reg-step6-preview.png')}
           alt="Предпросмотр заявки перед отправкой"
           width={2048}
           height={1170}
@@ -121,7 +122,7 @@ import Callout from './Callout.astro';
           Подписываем своим ЭЦП и отправляем. Убеждаемся, что документ принят.
         </p>
         <ImagePreview
-          src="https://qazaqtaxcheatsheet.fyi/images/reg-step7-confirm.png"
+          src={withBase('/images/reg-step7-confirm.png')}
           alt="Подтверждение принятия документа"
           width={1562}
           height={534}
@@ -138,7 +139,7 @@ import Callout from './Callout.astro';
         <summary class="faq-question">Что делать, если ответ пришел «НП уже имеет активный режим налогообложения»</summary>
         <div class="faq-answer">
           <ImagePreview
-            src="https://qazaqtaxcheatsheet.fyi/images/reg-faq-error.png"
+            src={withBase('/images/reg-faq-error.png')}
             alt="Ошибка: НП уже имеет активный режим налогообложения"
             width={1277}
             height={617}
@@ -148,13 +149,13 @@ import Callout from './Callout.astro';
           <p>Загрузите приложение <strong>E-Salyq Business</strong> и проверьте свой статус в профиле. Должно быть так, если вы на упрощенке:</p>
           <div class="mobile-screenshots">
             <ImagePreview
-              src="https://qazaqtaxcheatsheet.fyi/images/reg-faq-esalyq1.jpg"
+              src={withBase('/images/reg-faq-esalyq1.jpg')}
               alt="E-Salyq Business — профиль ИП, часть 1"
               width={589}
               height={1280}
             />
             <ImagePreview
-              src="https://qazaqtaxcheatsheet.fyi/images/reg-faq-esalyq2.jpg"
+              src={withBase('/images/reg-faq-esalyq2.jpg')}
               alt="E-Salyq Business — профиль ИП, часть 2"
               width={589}
               height={1280}
@@ -171,14 +172,14 @@ import Callout from './Callout.astro';
           <p>Заходим на сайт <a href="https://knp.kgd.gov.kz/signin" target="_blank" rel="noopener noreferrer" class="link">knp.kgd.gov.kz/signin</a>
           и переходим в профиль.</p>
           <ImagePreview
-            src="https://qazaqtaxcheatsheet.fyi/images/reg-faq-profile.png"
+            src={withBase('/images/reg-faq-profile.png')}
             alt="Профиль в кабинете КГД"
             width={2048}
             height={1015}
           />
           <p>Скроллим в самый низ и ищем вот такой блок:</p>
           <ImagePreview
-            src="https://qazaqtaxcheatsheet.fyi/images/reg-faq-status.png"
+            src={withBase('/images/reg-faq-status.png')}
             alt="Блок с режимом налогообложения в профиле"
             width={1638}
             height={872}

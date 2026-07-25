@@ -1,6 +1,7 @@
 ---
 import ContentPage from './ContentPage.astro';
 import ImagePreview from './ImagePreview.astro';
+import { withBase } from '../utils/url';
 ---
 
 <ContentPage title="Как получить учетный номер контракта (УНК)">
@@ -28,7 +29,7 @@ import ImagePreview from './ImagePreview.astro';
   <h3>2. Подписание документа</h3>
   <p>Подпиши получившийся документ через инструмент просмотра документов на macOS:</p>
   <ImagePreview
-    src="https://qazaqtaxcheatsheet.fyi/images/unk-sign-macos.png"
+    src={withBase('/images/unk-sign-macos.png')}
     alt="Подписание PDF через просмотр документов на macOS"
     width={1870}
     height={1208}
@@ -41,7 +42,7 @@ import ImagePreview from './ImagePreview.astro';
   Если пользуешься другим банком для юрлиц, то эта инструкция по заполнению будет полезна и тебе — набор полей
   вряд ли сильно отличается.</p>
   <ImagePreview
-    src="https://qazaqtaxcheatsheet.fyi/images/unk-onlinebank-menu.png"
+    src={withBase('/images/unk-onlinebank-menu.png')}
     alt="Меню валютного контроля в Onlinebank"
     width={1442}
     height={536}
@@ -49,7 +50,7 @@ import ImagePreview from './ImagePreview.astro';
 
   <p>Заполни поля формы таким образом:</p>
   <ImagePreview
-    src="https://qazaqtaxcheatsheet.fyi/images/unk-onlinebank-form.png"
+    src={withBase('/images/unk-onlinebank-form.png')}
     alt="Форма регистрации контракта в Onlinebank"
     width={930}
     height={1280}
@@ -103,7 +104,7 @@ import ImagePreview from './ImagePreview.astro';
         <p>При регистрации контракта можно приложить два документа: оригинальный контракт с подписями и его перевод,
         где в конце нужно написать <strong>«Перевод выполнен с оригинала. Перевод верен»</strong> и ниже свою подпись с датой.</p>
         <ImagePreview
-          src="https://qazaqtaxcheatsheet.fyi/images/unk-translation-tip.jpg"
+          src={withBase('/images/unk-translation-tip.jpg')}
           alt="Пример оформления перевода контракта"
           width={814}
           height={822}

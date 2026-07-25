@@ -1,4 +1,6 @@
 ---
+import { withBase } from '../utils/url';
+
 const asciiLogo = `  ___ _____
  / _ \\_   _|
 | | | || |
@@ -20,13 +22,13 @@ const asciiLogo = `  ___ _____
     <div class="footer-col">
       <h3 class="footer-heading">Навигация</h3>
       <ul class="footer-links">
-        <li><a href="https://qazaqtaxcheatsheet.fyi/">Главная</a></li>
-        <li><a href="https://qazaqtaxcheatsheet.fyi/taxes/">Налоги</a></li>
-        <li><a href="https://qazaqtaxcheatsheet.fyi/archive/ip-usn-registration/">Регистрация</a></li>
-        <li><a href="https://qazaqtaxcheatsheet.fyi/faq/">FAQ</a></li>
-        <li><a href="https://qazaqtaxcheatsheet.fyi/banks/">Банки</a></li>
-        <li><a href="https://qazaqtaxcheatsheet.fyi/useful-for-devs/">Полезное</a></li>
-        <li><a href="https://qazaqtaxcheatsheet.fyi/archive/">Архив</a></li>
+        <li><a href={withBase('/')}>Главная</a></li>
+        <li><a href={withBase('/taxes/')}>Налоги</a></li>
+        <li><a href={withBase('/archive/ip-usn-registration/')}>Регистрация</a></li>
+        <li><a href={withBase('/faq/')}>FAQ</a></li>
+        <li><a href={withBase('/banks/')}>Банки</a></li>
+        <li><a href={withBase('/useful-for-devs/')}>Полезное</a></li>
+        <li><a href={withBase('/archive/')}>Архив</a></li>
       </ul>
     </div>
 
@@ -50,7 +52,7 @@ const asciiLogo = `  ___ _____
       <ul class="footer-links">
         <li><a href="https://github.com/maximgorbatyuk/qazaqtaxcheatsheet" target="_blank" rel="noopener noreferrer">Repository</a></li>
         <li><a href="https://github.com/maximgorbatyuk/qazaqtaxcheatsheet/issues" target="_blank" rel="noopener noreferrer">Issues</a></li>
-        <li><a href="https://qazaqtaxcheatsheet.fyi/privacy-policy/">Privacy Policy</a></li>
+        <li><a href={withBase('/privacy-policy/')}>Privacy Policy</a></li>
         <li><a href="https://github.com/maximgorbatyuk/qazaqtaxcheatsheet/blob/main/LICENSE" target="_blank" rel="noopener noreferrer">License</a></li>
       </ul>
     </div>

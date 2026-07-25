@@ -1,4 +1,6 @@
 ---
+import { withBase } from '../utils/url';
+
 interface Props {
   currentPath: string;
 }
@@ -14,7 +16,7 @@ const navLinks = [
 
 <header class="navbar">
   <nav class="navbar-inner" aria-label="Основная навигация">
-    <a href="https://qazaqtaxcheatsheet.fyi/" class="navbar-logo">
+    <a href={withBase('/')} class="navbar-logo">
       QazaqTaxCheatsheet
     </a>
 
@@ -30,7 +32,7 @@ const navLinks = [
           const isActive = currentPath === link.path || (link.path !== '/' && currentPath.startsWith(link.path));
           return (
             <li>
-              <a href={`https://qazaqtaxcheatsheet.fyi${link.path}`} class:list={['nav-link', { active: isActive }]}>
+              <a href={withBase(link.path)} class:list={['nav-link', { active: isActive }]}>
                 {link.label}
               </a>
             </li>

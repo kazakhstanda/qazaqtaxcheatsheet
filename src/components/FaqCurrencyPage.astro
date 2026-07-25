@@ -1,6 +1,7 @@
 ---
 import ContentPage from './ContentPage.astro';
 import ImagePreview from './ImagePreview.astro';
+import { withBase } from '../utils/url';
 ---
 
 <ContentPage title="FAQ по валютному контролю">
@@ -26,7 +27,7 @@ import ImagePreview from './ImagePreview.astro';
       <summary class="faq-question">Получаем по контракту</summary>
       <div class="faq-answer">
         <p>Во-первых, необходимо зарегистрировать контракт в банке.
-        Как это сделать — читайте в разделе <a href="https://qazaqtaxcheatsheet.fyi/unk/" class="link">Как получить УНК</a>.</p>
+        Как это сделать — читайте в разделе <a href={withBase('/unk/')} class="link">Как получить УНК</a>.</p>
         <p>Во-вторых, в форме вы указываете в выпадающем списке свой контракт, а затем при заполнении
         текста пишете:</p>
         <blockquote>
@@ -59,7 +60,7 @@ import ImagePreview from './ImagePreview.astro';
       <summary class="faq-question">В форме валютного контроля появились поля КНП и КОД. Что делать?</summary>
       <div class="faq-answer">
         <ImagePreview
-          src="https://qazaqtaxcheatsheet.fyi/images/currency-control-form.jpg"
+          src={withBase('/images/currency-control-form.jpg')}
           alt="Форма валютного контроля с полями КНП и КОД"
           width={917}
           height={264}

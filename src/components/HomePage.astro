@@ -21,6 +21,7 @@ const changelog = [
 ];
 
 import { sections } from '../data/sections';
+import { withBase } from '../utils/url';
 ---
 
 <div class="page">
@@ -78,7 +79,7 @@ import { sections } from '../data/sections';
     <h2 class="section-title">Разделы</h2>
     <div class="grid">
       {sections.map((s) => (
-        <a href={`https://qazaqtaxcheatsheet.fyi${s.path}`} class="section-card">
+        <a href={withBase(s.path)} class="section-card">
           <span class="card-icon">{s.icon}</span>
           <span class="card-title">{s.title}</span>
           <span class="card-desc">{s.desc}</span>

@@ -1,11 +1,12 @@
 ---
 import { sections } from '../data/sections';
+import { withBase } from '../utils/url';
 ---
 
 <nav class="section-nav" aria-label="Разделы">
   <div class="section-grid">
     {sections.map((s) => (
-      <a href={`https://qazaqtaxcheatsheet.fyi${s.path}`} class="section-card">
+      <a href={withBase(s.path)} class="section-card">
         <span class="card-icon">{s.icon}</span>
         <span class="card-title">{s.title}</span>
         <span class="card-desc">{s.desc}</span>

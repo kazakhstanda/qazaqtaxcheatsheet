@@ -3,8 +3,9 @@ import ContentPage from './ContentPage.astro';
 import Callout from './Callout.astro';
 import ImagePreview from './ImagePreview.astro';
 import PdfModal from './PdfModal.astro';
+import { withBase } from '../utils/url';
 
-const agreementImage = 'https://qazaqtaxcheatsheet.fyi/images/upwork/Upwork-onlinebank-agreement.jpg';
+const agreementImage = withBase('/images/upwork/Upwork-onlinebank-agreement.jpg');
 ---
 
 <ContentPage
@@ -50,11 +51,11 @@ const agreementImage = 'https://qazaqtaxcheatsheet.fyi/images/upwork/Upwork-onli
     <li>Третье лицо: <b>Отправитель денег</b></li>
     <li>Наименование третьего лица: <b>Payment Escrow Inc.</b></li>
     <li>Страна третьего лица: <b>United States</b></li>
-    <li>Прикрепить в поле внизу <a target="_blank" href="https://qazaqtaxcheatsheet.fyi/files/upwork/Upwork-user-agreement-2026.pdf">договор Upwork</a></li>
+    <li>Прикрепить в поле внизу <a target="_blank" href={withBase('/files/upwork/Upwork-user-agreement-2026.pdf')}>договор Upwork</a></li>
     <li>Прикрепить инвойс (подробнее ниже)</li>
   </ul>
   <PdfModal
-    src="https://qazaqtaxcheatsheet.fyi/files/upwork/Upwork-user-agreement-2026.pdf"
+    src={withBase('/files/upwork/Upwork-user-agreement-2026.pdf')}
     title="Договор Upwork"
     caption="Upwork User Agreement, 2026"
   />
@@ -80,10 +81,10 @@ const agreementImage = 'https://qazaqtaxcheatsheet.fyi/images/upwork/Upwork-onli
   <p>
     Для обоснования изменения суммы контракта необходим инвойс от Upwork и его перевод.
     Фрилансер должен сам создать инвйос для Upwork.
-    Пример инвойса можно найти по ссылке <a target="_blank" href="https://qazaqtaxcheatsheet.fyi/files/upwork/Confirmation_of_Services_Form_RU-EN.pdf">Confirmation of Services Form (RU-EN)</a>.
+    Пример инвойса можно найти по ссылке <a target="_blank" href={withBase('/files/upwork/Confirmation_of_Services_Form_RU-EN.pdf')}>Confirmation of Services Form (RU-EN)</a>.
   </p>
   <PdfModal
-    src="https://qazaqtaxcheatsheet.fyi/files/upwork/Confirmation_of_Services_Form_RU-EN.pdf"
+    src={withBase('/files/upwork/Confirmation_of_Services_Form_RU-EN.pdf')}
     title="Confirmation of Services Form (RU-EN)"
     caption="Пример инвойса и перевода для валютного контроля"
   />

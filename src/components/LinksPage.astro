@@ -2,17 +2,19 @@
 import ContentPage from './ContentPage.astro';
 
 const links = [
-  { url: 'https://mybuh.kz', name: 'mybuh.kz', description: 'Калькулятор налогов ИП на упрощенке' },
   { url: 'https://egov.kz', name: 'egov.kz', description: 'Оплата налогов, проверка задолженностей, госуслуги' },
-  { url: 'https://cabinet.kgd.gov.kz', name: 'cabinet.kgd.gov.kz', description: 'Кабинет налогоплательщика: начисления, задолженности, история' },
-  { url: 'https://cabinet.salyk.kz', name: 'cabinet.salyk.kz', description: 'Подача формы 910 и других форм налоговой отчетности' },
+  { url: 'https://knp.kgd.gov.kz', name: 'knp.kgd.gov.kz', description: 'Кабинет налогоплательщика КГД: начисления, задолженности, подача формы 910 и другой отчётности. Пришёл на смену устаревшему <a href="https://cabinet.kgd.gov.kz" target="_blank" rel="noopener noreferrer" class="link">cabinet.kgd.gov.kz</a> и давно недоступному <a href="https://cabinet.salyk.kz" target="_blank" rel="noopener noreferrer" class="link">cabinet.salyk.kz</a>' },
+  { url: 'https://esf.gov.kz:8443/esf-web/app', name: 'esf.gov.kz:8443', description: 'Кабинет для выписки электронных счетов-фактур (ЭСФ)' },
+  { url: 'https://elicense.kz', name: 'elicense.kz', description: 'Подача уведомлений о начале и прекращении деятельности ИП, а также об изменении сведений о ней' },
+  { url: 'https://lk.efinance.gov.kz', name: 'lk.efinance.gov.kz', description: 'Единый личный кабинет предпринимателя, объединяющий другие госсервисы. По опыту авторов доступ через него местами менее стабилен, чем напрямую через нужный кабинет' },
+  { url: 'https://cabinet.stat.gov.kz', name: 'cabinet.stat.gov.kz', description: 'Отображает данные, поданные через <a href="https://elicense.kz" target="_blank" rel="noopener noreferrer" class="link">elicense.kz</a>. Их можно изменить и здесь, но пока не до конца ясно, чем это отличается от правки через elicense.kz и какие тут риски' },
+  { url: 'https://mybuh.kz', name: 'mybuh.kz', description: 'Калькулятор налогов ИП на упрощенке' },
   { url: 'https://uchet.kz', name: 'uchet.kz', description: 'Курсы валют Национального банка РК' },
-  { url: 'https://esf.gov.kz', name: 'esf.gov.kz', description: 'Портал электронных счетов-фактур (ЭСФ)' },
   { url: 'https://kompra.kz', name: 'kompra.kz', description: 'Проверка ИП и компаний, контрагентов, судебных дел' },
 ];
 ---
 
-<ContentPage title="Полезное для разработчиков">
+<ContentPage title="Полезные материалы">
   <p class="intro">
     Подборка ссылок, сервисов и инструментов для ведения ИП на упрощенке.
   </p>
@@ -30,7 +32,7 @@ const links = [
         {links.map((link) => (
           <tr>
             <td><a href={link.url} target="_blank" rel="noopener noreferrer" class="link">{link.name}</a></td>
-            <td>{link.description}</td>
+            <td set:html={link.description} />
           </tr>
         ))}
       </tbody>

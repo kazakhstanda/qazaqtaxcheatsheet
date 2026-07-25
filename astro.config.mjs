@@ -5,6 +5,9 @@ import { defineConfig } from 'astro/config';
 export default defineConfig({
     site: 'https://qazaqtaxcheatsheet.fyi',
     trailingSlash: 'always',
+    build: {
+        assetsPrefix: 'https://qazaqtaxcheatsheet.fyi',
+    },
     vite: {
         cacheDir: './.vite-cache',
     },

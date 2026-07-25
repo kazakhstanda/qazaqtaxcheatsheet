@@ -17,7 +17,7 @@ const next = nextIndex >= 0 ? sections[nextIndex] : null;
 {(prev || next) && (
   <nav class="page-nav" aria-label="Навигация по страницам">
     {prev ? (
-      <a href={prev.path} class="page-nav-link page-nav-prev">
+      <a href={`https://qazaqtaxcheatsheet.fyi${prev.path}`} class="page-nav-link page-nav-prev">
         <span class="page-nav-label">Предыдущая страница</span>
         <span class="page-nav-title">
           <svg class="page-nav-arrow" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
@@ -29,7 +29,7 @@ const next = nextIndex >= 0 ? sections[nextIndex] : null;
       </a>
     ) : <div />}
     {next ? (
-      <a href={next.path} class="page-nav-link page-nav-next">
+      <a href={`https://qazaqtaxcheatsheet.fyi${next.path}`} class="page-nav-link page-nav-next">
         <span class="page-nav-label">Следующая страница</span>
         <span class="page-nav-title">
           {next.title}

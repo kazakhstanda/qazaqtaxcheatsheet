@@ -1,5 +1,6 @@
 ---
 import NextPageNav from './NextPageNav.astro';
+import { withoutBase } from '../utils/url';
 
 interface Props {
   title: string;
@@ -7,7 +8,7 @@ interface Props {
 }
 
 const { title, description } = Astro.props;
-const currentPath = Astro.url.pathname;
+const currentPath = withoutBase(Astro.url.pathname);
 ---
 
 <div class="content-page-shell">

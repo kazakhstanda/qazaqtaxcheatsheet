@@ -2,6 +2,7 @@
 import ContentPage from './ContentPage.astro';
 import ImagePreview from './ImagePreview.astro';
 import banks from '../data/banks.json';
+import { withBase } from '../utils/url';
 ---
 
 <ContentPage title="Банки для ИП">
@@ -102,7 +103,7 @@ import banks from '../data/banks.json';
   <p>Onlinebank.kz → Переводы в валюте → Создать → Внутрибанковский валютный перевод</p>
   <p>Пример заполненной формы:</p>
   <ImagePreview
-    src="/images/banks-halyk-transfer.jpg"
+    src={withBase('/images/banks-halyk-transfer.jpg')}
     alt="Пример заполненной формы внутрибанковского валютного перевода"
     width={959}
     height={1259}

@@ -2,6 +2,7 @@
 import ContentPage from './ContentPage.astro';
 import ImagePreview from './ImagePreview.astro';
 import Callout from './Callout.astro';
+import { withBase } from '../utils/url';
 ---
 
 <ContentPage title="Как заполнить форму 910 в 2026 году (Mybuh.kz)">
@@ -30,7 +31,7 @@ import Callout from './Callout.astro';
       <div class="step-content">
         <h2 class="step-title">1. Открыть mybuh.kz, перейти в раздел "Налоговые отчеты"</h2>
         <ImagePreview
-          src="/images/910_form/page_0.png"
+          src={withBase('/images/910_form/page_0.png')}
           alt="Как перейти в раздел"
         />
         <p class="step-text">
@@ -38,7 +39,7 @@ import Callout from './Callout.astro';
         </p>
 
         <ImagePreview
-          src="/images/910_form/page_0_1.png"
+          src={withBase('/images/910_form/page_0_1.png')}
           alt="Как выбрать форму 910.00"
         />
 
@@ -56,7 +57,7 @@ import Callout from './Callout.astro';
         </p>
 
         <ImagePreview
-          src="/images/910_form/page_1.png"
+          src={withBase('/images/910_form/page_1.png')}
           alt="Как выбрать форму 910.00"
         />
 
@@ -72,7 +73,7 @@ import Callout from './Callout.astro';
         </p>
 
         <ImagePreview
-          src="/images/910_form/page_2_1.png"
+          src={withBase('/images/910_form/page_2_1.png')}
           alt="Как выбрать форму 910.00"
         />
 
@@ -81,7 +82,7 @@ import Callout from './Callout.astro';
         </p>
 
         <ImagePreview
-          src="/images/910_form/page_2_2.png"
+          src={withBase('/images/910_form/page_2_2.png')}
           alt="Как выбрать форму 910.00"
         />
       </div>
@@ -95,7 +96,7 @@ import Callout from './Callout.astro';
           различных платежей, которые уже были уплочены в начале каждого месяца за предыдущий.
         </p>
         <ImagePreview
-          src="/images/910_form/page_3.jpg"
+          src={withBase('/images/910_form/page_3.jpg')}
           alt="Зарплата предпринимателя"
         />
       </div>
@@ -110,7 +111,7 @@ import Callout from './Callout.astro';
         </p>
 
         <ImagePreview
-          src="/images/910_form/page_4.jpg"
+          src={withBase('/images/910_form/page_4.jpg')}
           alt="Предпросмотр формы 910"
         />
       </div>
@@ -125,7 +126,7 @@ import Callout from './Callout.astro';
           В случае, если статус неуспешен, нужно уже смотреть в пояснение, которое будет приложено к форме со стороны налоговой.
         </p>
         <ImagePreview
-          src="/images/910_form/page_6.png"
+          src={withBase('/images/910_form/page_6.png')}
           alt="Успешная подача формы"
         />
       </div>
@@ -165,7 +166,7 @@ import Callout from './Callout.astro';
         <div class="faq-answer">
           <p>Подоходный налог удобно оплатить в банковских приложениях (Kaspi, Halyk) в
           разделе «Госуслуги» → налоги. Подробности — в разделе
-          <a href="/taxes/" class="link">«Какие налоги оплачивать»</a>.</p>
+          <a href={withBase('/taxes/')} class="link">«Какие налоги оплачивать»</a>.</p>
         </div>
       </details>
 

@@ -1,12 +1,13 @@
 ---
 import Layout from '../layouts/Layout.astro';
+import { withBase } from '../utils/url';
 ---
 
 <Layout title="404">
   <div class="not-found">
     <h1 class="title">404</h1>
     <p class="message">Такой страницы не существует.</p>
-    <a href="/" class="btn">На главную</a>
+    <a href={withBase('/')} class="btn">На главную</a>
   </div>
 </Layout>
 

@@ -1,4 +1,6 @@
 ---
+import { withBase } from '../utils/url';
+
 const changelog = [
   { date: '2026-07-07', text: 'Добавлена пошаговая инструкция по заполнению формы 910 (упрощённой декларации) в 2026 году' },
   { date: '2026-06-19', text: 'Добавлена инструкция для фрилансеров по легализации дохода от Upwork' },
@@ -21,14 +23,12 @@ const changelog = [
 ];
 
 import { sections } from '../data/sections';
-import { withBase } from '../utils/url';
 ---
 
 <div class="page">
   <main class="hero">
     <h1 class="title">
-      Шпаргалка по ИП
-      <span class="title-accent">на УСН в Казахстане</span>
+      Шпаргалка по ИП <span class="title-accent">на УСН в Казахстане</span>
     </h1>
 
     <p class="description">Вопросы, ссылки, хаки, подсказки для ведения ИП на упрощенке. Целевая аудитория — разработчики на удаленке, но советы могут быть полезны любому, кто работает на валютном контракте.</p>
@@ -80,8 +80,10 @@ import { withBase } from '../utils/url';
     <div class="grid">
       {sections.map((s) => (
         <a href={withBase(s.path)} class="section-card">
-          <span class="card-icon">{s.icon}</span>
-          <span class="card-title">{s.title}</span>
+          <span class="card-header">
+            <span class="card-icon">{s.icon}</span>
+            <span class="card-title">{s.title}</span>
+          </span>
           <span class="card-desc">{s.desc}</span>
         </a>
       ))}
@@ -115,28 +117,27 @@ import { withBase } from '../utils/url';
 
   .hero {
     text-align: center;
-    max-width: 40rem;
+    max-width: 58rem;
   }
 
   .title {
-    font-size: clamp(2.25rem, 1.5rem + 2.5vw, 3rem);
+    font-size: clamp(1.625rem, 1.3rem + 1.4vw, 2.125rem);
     font-weight: 700;
     line-height: var(--line-height-heading);
     letter-spacing: -0.02em;
     color: var(--fg-primary);
-    margin-bottom: var(--space-4);
+    margin-bottom: var(--space-3);
   }
 
   .title-accent {
-    display: block;
     color: var(--accent);
   }
 
   .description {
-    font-size: 1.125rem;
+    font-size: 1rem;
     color: var(--fg-secondary);
     line-height: var(--line-height-body);
-    max-width: 36rem;
+    max-width: 100%;
     margin: 0 auto var(--space-3);
   }
 
@@ -223,8 +224,15 @@ import { withBase } from '../utils/url';
     background: var(--bg-tertiary);
   }
 
+  .card-header {
+    display: flex;
+    align-items: center;
+    gap: var(--space-2);
+  }
+
   .card-icon {
     font-size: 1.5rem;
+    line-height: 1;
   }
 
   .card-title {
